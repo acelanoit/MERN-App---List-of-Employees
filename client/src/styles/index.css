@@ -1,0 +1,34 @@
+body {
+    margin: 15px;
+}
+
+.navbar-custom {
+    background-color: #6D67E4;
+}
+
+.create-record-button-navbar,
+.create-record-button-navbar:focus {
+    color: #FFFFFF;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #22A39F;
+}
+
+.table-cols {
+    padding: 5px 10px;
+}
+
+@media (min-width: 993px) {
+    .create-nav-bar-link {
+        margin-right: 200px;
+        font-size: 1.5rem;
+    }
+}
