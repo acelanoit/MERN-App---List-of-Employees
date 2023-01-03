@@ -7,14 +7,9 @@ export default function RecordList() {
 
     // This method fetches the records from the database:
     useEffect(() => {
-        function getRecords() {
-            fetch("/home")
-                .then((res) => res.json())
-                .then((data) => setRecords(data));
-        }
-
-        getRecords();
-
+        fetch("/home")
+            .then((res) => res.json())
+            .then((data) => setRecords(data));
     }, []);
 
     // This method will delete a record:

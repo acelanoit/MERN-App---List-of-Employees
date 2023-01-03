@@ -24,14 +24,10 @@ export default function Edit() {
     }
 
     useEffect(() => {
-        function fetchRecord() {
-            const id = params.id;
-            fetch("/edit/" + id)
-                .then((res) => res.json())
-                .then((data) => setForm(data));
-        }
-
-        fetchRecord();
+        const id = params.id;
+        fetch("/edit/" + id)
+            .then((res) => res.json())
+            .then((data) => setForm(data));
     }, []);
 
     function handleSubmit(e) {
