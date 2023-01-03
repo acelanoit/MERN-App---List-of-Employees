@@ -26,6 +26,10 @@ a:hover {
     padding: 5px 10px;
 }
 
+.forms-inputs {
+    margin-right: 15px;
+}
+
 @media (min-width: 993px) {
     .create-nav-bar-link {
         margin-right: 200px;

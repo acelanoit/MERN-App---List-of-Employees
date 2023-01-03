@@ -67,12 +67,13 @@ export default function Create() {
 
     return (
         <div>
+        <h3>Create Record</h3>
             <form onSubmit={handleSubmit}>
-                <input name="name" value={form.name} onChange={(e) => { updateForm({ name: e.target.value }) }} placeholder="Name">
+                <input name="name" value={form.name} onChange={(e) => { updateForm({ name: e.target.value }) }} placeholder="Name" className="forms-inputs">
                 </input>
-                <input name="position" value={form.position} onChange={(e) => { updateForm({ position: e.target.value }) }} placeholder="Position">
+                <input name="position" value={form.position} onChange={(e) => { updateForm({ position: e.target.value }) }} placeholder="Position" className="forms-inputs">
                 </input>
-                <button className="btn btn-secondary" disabled={disabled} style={{ marginLeft: "10px" }}>Submit</button>
+                <button className="btn btn-secondary" disabled={disabled}>Submit</button>
             </form>
         </div>
     );

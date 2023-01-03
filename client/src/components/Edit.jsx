@@ -82,11 +82,11 @@ export default function Edit() {
         <div>
             <h3>Update Record</h3>
             <form onSubmit={handleSubmit}>
-                <input name="name" value={form.name} onChange={(e) => { updateForm({ name: e.target.value }) }}>
+                <input name="name" value={form.name} onChange={(e) => { updateForm({ name: e.target.value }) }} className="forms-inputs">
                 </input>
-                <input name="position" value={form.position} onChange={(e) => { updateForm({ position: e.target.value }) }}>
+                <input name="position" value={form.position} onChange={(e) => { updateForm({ position: e.target.value }) }} className="forms-inputs">
                 </input>
-                <button className="btn btn-secondary" disabled={disabled} style={{ marginLeft: "10px" }}>Submit</button>
+                <button className="btn btn-secondary" disabled={disabled}>Submit</button>
             </form>
         </div>
     );
