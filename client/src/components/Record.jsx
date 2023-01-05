@@ -5,7 +5,7 @@ export default function Record(props) {
 
     const editLink = "/edit/" + props.id;
     const [disabled, setDisabled] = useState(false);
-    const [hidden, setHidden] = useState(true);
+    const [hidden, sethidden] = useState(true);
 
     return (
         <tr>
@@ -15,7 +15,7 @@ export default function Record(props) {
                 <Link to={editLink} className="btn btn-secondary" >Edit</Link>
             </td>
             <td className="table-cols">
-                <button className="btn btn-secondary" onClick={() => { setHidden(false) }}>Delete</button>
+                <button className="btn btn-secondary" onClick={() => { sethidden(false) }}>Delete</button>
             </td>
             <td className="table-cols" hidden={hidden}>Are you sure?</td>
             <td className="table-cols">
@@ -25,7 +25,7 @@ export default function Record(props) {
                 }}>Confirm</button>
             </td>
             <td className="table-cols">
-                <button className="btn btn-secondary" hidden={hidden} onClick={() => { setHidden(true) }}>Cancel</button>
+                <button className="btn btn-secondary" hidden={hidden} onClick={() => { sethidden(true) }}>Cancel</button>
             </td>
         </tr>
     );

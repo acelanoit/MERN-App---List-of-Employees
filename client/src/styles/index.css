@@ -30,6 +30,13 @@ a:hover {
     margin-right: 15px;
 }
 
+@media (max-width: 992px) {
+    .create-nav-bar-link {
+        position: relative;
+        bottom: 70px;
+    }
+}
+
 @media (min-width: 993px) {
     .create-nav-bar-link {
         margin-right: 200px;
