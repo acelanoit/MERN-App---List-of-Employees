@@ -5,7 +5,7 @@ export default function RecordList() {
 
     const [records, setRecords] = useState([]);
 
-    // This method fetches the records from the database
+    // This method fetches the records from the database:
     useEffect(() => {
         fetch("https://mern-list-of-employees-api.vercel.app/home")
             .then((res) => res.json())
