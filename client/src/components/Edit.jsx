@@ -25,7 +25,7 @@ export default function Edit() {
 
     useEffect(() => {
         const id = params.id;
-        fetch("/edit/" + id)
+        fetch("https://mern-list-of-employees-api.vercel.app/edit/" + id)
             .then((res) => res.json())
             .then((data) => setForm(data));
     }, []);
@@ -38,7 +38,7 @@ export default function Edit() {
         e.preventDefault();
         const id = params.id;
 
-        fetch("/edit/" + id, {
+        fetch("https://mern-list-of-employees-api.vercel.app/edit/" + id, {
             method: "PATCH",
 
             // The fetch call needs some headers that tell the server how to interpret the request

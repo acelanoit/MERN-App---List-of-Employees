@@ -7,14 +7,14 @@ export default function RecordList() {
 
     // This method fetches the records from the database:
     useEffect(() => {
-        fetch("/home")
+        fetch("https://mern-list-of-employees-api.vercel.app/home")
             .then((res) => res.json())
             .then((data) => setRecords(data));
     }, []);
 
     // This method will delete a record:
     function deleteRecord(id) {
-        fetch("/delete/" + id, {
+        fetch("https://mern-list-of-employees-api.vercel.app/delete/" + id, {
             method: "DELETE"
         })
 

@@ -26,7 +26,7 @@ export default function Create() {
         // In this case, it prevents the form component from refreshing the page after submit:
         e.preventDefault();
 
-        fetch("/add", {
+        fetch("https://mern-list-of-employees-api.vercel.app/add", {
             method: "POST",
 
             // The fetch call needs some headers that tell the server how to interpret the request
