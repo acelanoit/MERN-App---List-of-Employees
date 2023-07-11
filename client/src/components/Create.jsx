@@ -66,7 +66,7 @@ export default function Create() {
     }
 
     return (
-        <div>
+        <div className="mx-4 my-4">
         <h3>Create Record</h3>
             <form onSubmit={handleSubmit}>
                 <input name="name" value={form.name} onChange={(e) => { updateForm({ name: e.target.value }) }} placeholder="Name" className="forms-inputs">

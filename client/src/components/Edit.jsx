@@ -75,7 +75,7 @@ export default function Edit() {
     }
 
     return (
-        <div>
+        <div className="mx-4 my-4">
             <h3>Update Record</h3>
             <form onSubmit={handleSubmit}>
                 <input name="name" value={form.name} onChange={(e) => { updateForm({ name: e.target.value }) }} className="forms-inputs">
