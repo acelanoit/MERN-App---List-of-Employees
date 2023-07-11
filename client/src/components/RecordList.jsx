@@ -4,6 +4,7 @@ import Record from "./Record";
 export default function RecordList() {
 
     const [records, setRecords] = useState([]);
+    const isMobile = window.outerWidth < 394;
 
     // This method fetches the records from the database:
     useEffect(() => {
@@ -50,7 +51,7 @@ export default function RecordList() {
     // This section displays the table with the records of individuals:
     return (
         <div>
-            <table>
+            <table className={isMobile ? "mx-auto my-4" : "mx-4 my-4"}>
                 <tbody>
                     <tr>
                         <th className="table-cols">Name</th>
