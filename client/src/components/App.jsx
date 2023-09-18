@@ -8,18 +8,20 @@ import Navbar from "./Navbar";
 import RecordList from "./RecordList";
 import Edit from "./Edit";
 import Create from "./Create";
+import Footer from "./Footer";
 
 const App = () => {
-    return (
-        <div>
-            <Navbar />
-            <Routes>
-                <Route exact path="/" element={<RecordList />} />
-                <Route path="/edit/:id" element={<Edit />} />
-                <Route path="/create" element={<Create />} />
-            </Routes>
-        </div>
-    );
+  return (
+    <div>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<RecordList />} />
+        <Route path="/edit/:id" element={<Edit />} />
+        <Route path="/create" element={<Create />} />
+      </Routes>
+      <Footer />
+    </div>
+  );
 };
 
 export default App;

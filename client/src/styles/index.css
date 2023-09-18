@@ -1,41 +1,49 @@
 .navbar-custom {
-    background-color: #67e486;
+  background-color: #67e486;
 }
 
 .create-record-button-navbar,
 .create-record-button-navbar:focus {
-    color: #FFFFFF;
+  color: #FFFFFF;
 }
 
 a:link,
 a:visited,
 a:hover,
 a:active {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a:hover {
-    color: #22A39F;
+  color: #22A39F;
 }
 
 .table-cols {
-    padding: 5px 10px;
+  padding: 5px 10px;
 }
 
 .forms-inputs {
-    margin-right: 15px;
+  margin-right: 15px;
+}
+
+.copyright {
+  bottom: 0;
+  font-size: small;
+  left: 0;
+  position: absolute;
+  right: 0;
 }
 
 @media (max-width: 992px) {
-    .create-nav-bar-link {
-        position: relative;
-        bottom: 70px;
-    }
+  .create-nav-bar-link {
+    position: relative;
+    bottom: 70px;
+  }
 }
 
 @media (min-width: 993px) {
-    .create-nav-bar-link {
-        margin-right: 200px;
-        font-size: 1.5rem;
-    }
+  .create-nav-bar-link {
+    margin-right: 200px;
+    font-size: 1.5rem;
+  }
 }
