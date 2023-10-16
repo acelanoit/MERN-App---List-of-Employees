@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
 export default function Edit() {
+
+  const MySwal = withReactContent(Swal);
 
   const [form, setForm] = useState({
     name: "",
@@ -53,7 +57,10 @@ export default function Edit() {
       body: JSON.stringify(form)
     })
       .catch(error => {
-        window.alert(error);
+        MySwal.fire({
+          icon: "error",
+          title: error
+        });
         return;
       })
 
@@ -68,7 +75,10 @@ export default function Edit() {
       // Once we have the data returned to us, we get the message property and then put it in a variable called data.
       // This will allow us to display that message in an alert:
       .then((data) => {
-        alert(data.message);
+        MySwal.fire({
+          icon: "success",
+          title: data.message
+        });
 
         // Redirect the user to the home route after 2 seconds:
         setTimeout(() => { navigate("/") }, 2000);
