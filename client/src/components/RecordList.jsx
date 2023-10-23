@@ -6,15 +6,18 @@ import withReactContent from "sweetalert2-react-content";
 export default function RecordList() {
 
   const MySwal = withReactContent(Swal);
-
   const [records, setRecords] = useState([]);
+  const [loading, setLoading] = useState(true);
   const isMobile = window.outerWidth < 394;
 
   // This method fetches the records from the database:
   useEffect(() => {
     fetch("https://mern-list-of-employees-api.vercel.app/home")
       .then((res) => res.json())
-      .then((data) => setRecords(data));
+      .then((data) => {
+        setRecords(data);
+        setLoading(false);
+      });
   }, []);
 
   // This method will delete a record:
@@ -67,7 +70,14 @@ export default function RecordList() {
             <th className="table-cols">Name</th>
             <th className="table-cols">Position</th>
           </tr>
-          {records.map(listRecord)}
+          {loading
+            ? (
+              <tr>
+                <td className="table-cols">Loading...</td>
+              </tr>
+            )
+            : records.map(listRecord)
+          }
         </tbody>
       </table>
     </div>
