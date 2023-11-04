@@ -8,7 +8,7 @@ export default function RecordList() {
   const MySwal = withReactContent(Swal);
   const [records, setRecords] = useState([]);
   const [loading, setLoading] = useState(true);
-  const isMobile = window.outerWidth < 394;
+  const isMobile = window.outerWidth < 768;
 
   // This method fetches the records from the database:
   useEffect(() => {

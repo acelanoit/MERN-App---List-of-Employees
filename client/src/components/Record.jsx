@@ -5,7 +5,7 @@ export default function Record(props) {
     const editLink = "/edit/" + props.id;
     const [disabled, setDisabled] = useState(false);
     const [hidden, setHidden] = useState(true);
-    const isMobile = window.outerWidth < 394;
+    const isMobile = window.outerWidth < 768;
 
     if (isMobile) {
         return (
