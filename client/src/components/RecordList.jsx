@@ -195,8 +195,8 @@ export default function RecordList() {
         </tbody>
       </table>
       <div className={isMobile ? "mx-auto my-5" : "mx-4 my-5"}>
-        <input type="button" value="Delete All Records" className="btn btn-secondary" onClick={deleteAllRecords} />
-        <input type="button" value="Restore Default Records" className="ms-5 btn btn-secondary" onClick={restoreRecords} />
+        <input type="button" value="Delete All Records" className={isMobile ? "btn btn-secondary d-block" : "btn btn-secondary"} onClick={deleteAllRecords} />
+        <input type="button" value="Restore Default Records" className={isMobile ? "btn btn-secondary mt-3" : "btn btn-secondary ms-5"} onClick={restoreRecords} />
       </div>
     </div>
   );
