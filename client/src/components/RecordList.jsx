@@ -108,12 +108,12 @@ export default function RecordList() {
       position: "Coffee Manager"
     },
     {
-      name: "Natalia Jozwiak",
-      position: "Almost CEO, but not quite"
-    },
-    {
       name: "Manuela Celano",
       position: "Chairwoman of the Board of Directors"
+    },
+    {
+      name: "Natalia Jozwiak",
+      position: "Almost CEO, but not quite"
     },
     {
       name: "Dwight Schrute",
